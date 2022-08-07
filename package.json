@@ -1,0 +1,24 @@
+{
+  "name": "typescript",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "live-server && tsc -w"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kaludematto/EntendendoTypeScript.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kaludematto/EntendendoTypeScript/issues"
+  },
+  "homepage": "https://github.com/kaludematto/EntendendoTypeScript#readme",
+  "dependencies": {
+    "live-server": "^1.2.2"
+  }
+}
