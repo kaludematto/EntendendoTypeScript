@@ -18,3 +18,4 @@ let nota = 10; // permite definir dois tipos para a variavel nota
 console.log(`Minha nota é ${nota}`);
 nota = "10";
 console.log(`Minha nota é ${nota}`);
+//# sourceMappingURL=desafio.js.map
