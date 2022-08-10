@@ -1,16 +1,16 @@
-// string
+//TODO string
 let sobrenome = "Dematto";
 console.log(sobrenome);
 let primeiroNome: string = "Kalu";
-// numbers
+//TODO numbers
 let idade = 27;
 console.log(idade);
 
-//boolean
+//TODO boolean
 let possuiHobbies = false;
 console.log(possuiHobbies);
 
-// atribuindo tipos explicitos
+//TODO atribuindo tipos explicitos
 let minhaIdade: number = 1;
 minhaIdade = 35;
 let idadeTestando: any = 22;
@@ -20,22 +20,22 @@ console.log(idadeTestando);
 let typeTest: any;
 console.log(typeof typeTest);
 
-// Arrays
+//TODO Arrays
 
 let hobbies: any[] = ["Cozinhar", "Ler", "Estudar"];
 console.log(hobbies[0]);
 hobbies = [100, 200];
 console.log(hobbies);
 
-// Tuplas
-// É um array com tipo e uma quantidade pre-definida
+//TODO Tuplas
+//TODO É um array com tipo e uma quantidade pre-definida
 let endereco: [string, number] = ["Edgar Facó", 99]; // definindo array do tipo tupla
 console.log(endereco);
 // endereco = [2, 2] não é possivel declarar 2 numbers pq fere a tipagem anterior de tupla
 // endereco = ['edgar faco', 99, 199] não é possivel pois tem uma quantia de elementos maior que a declarada
 
-// Enums
-// Valores pre-definidos
+//TODO Enums
+//TODO Valores pre-definidos
 
 enum Cor {
   Azul, // 0
@@ -54,7 +54,7 @@ enum ErrorCodes {
 let succesResponse = ErrorCodes.success;
 console.log(succesResponse);
 
-// any
+//TODO any
 let carro: any = "Ferrari";
 carro = 200;
 carro = {
@@ -64,7 +64,7 @@ carro = {
 
 console.log(carro);
 
-// funções
+//TODO funções
 
 function retornaMeuNome(): string {
   //return minhaIdade; Exibe um erro, pois a função esta tipada como String
@@ -97,12 +97,12 @@ const teste2 = () => {
 
 teste2();
 
-// tipo Função
+//TODO tipo Função
 let calculo: (a: number, b: number) => number; // define que a variavel calculo seja do tipo função
 calculo = multiplicar;
 console.log(calculo(5, 6));
 
-// Objetos
+//TODO Objetos
 let usuario: { nome: string; idade: number } = {
   nome: "Kalu",
   idade: 35,
@@ -116,3 +116,52 @@ usuario = {
 };
 
 console.log(usuario);
+
+//TODO checando tipos
+let valor = 30;
+if (typeof valor === "number") {
+  console.log("É um number!");
+} else {
+  console.log(typeof valor);
+}
+
+//TODO tipo never
+//TODO Quer dizer que a função nunca vai retornar ou vai terminar com erro
+
+function falha(msg: string): never {
+  throw new Error(msg);
+}
+
+const produto = {
+  nome: "Sabão",
+  preco: 8,
+  validarProduto() {
+    if (!this.nome || this.nome.trim().length == 0) {
+      falha("Precisa ter um nome!");
+    }
+    if (this.preco <= 0) {
+      falha("Preco invalido!");
+    }
+  },
+};
+
+produto.validarProduto();
+
+//TODO Valores opcionais com o tipo Null
+let altura = 12;
+//altura = null
+let alturaOpcional: number | null = null;
+
+type Contato = {
+  nome: string;
+  tel1: string;
+  tel2: string | null;
+};
+
+const contato1: Contato = {
+  nome: "Kalu",
+  tel1: "994017769",
+  tel2: null,
+};
+
+console.log(contato1);

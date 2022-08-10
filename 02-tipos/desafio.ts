@@ -25,3 +25,11 @@ let funcionario: Funcionario = {
 
 console.log(funcionario.supervisores);
 console.log(funcionario.batePonto(8));
+
+// funcionario = {}
+
+// Union Types
+let nota: number | string = 10; // permite definir dois tipos para a variavel nota
+console.log(`Minha nota é ${nota}`);
+nota = "10";
+console.log(`Minha nota é ${nota}`);
